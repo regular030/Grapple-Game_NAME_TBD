@@ -17,8 +17,8 @@ extract the .zip
 Run Beta.exe
 
 
-Rest of changelogs are not with me atm will update once I find it 
+The rest of the changelogs are not with me atm will update once I find it 
 
 V 0.01.02.1
 - fixed bug where the prediction point would show on the player's screen and would stay on a static place on the screen (move with screen)
-- Added more clouds to lvl 4
+- Added more clouds to level 4
