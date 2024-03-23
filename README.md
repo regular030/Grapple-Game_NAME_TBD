@@ -20,5 +20,5 @@ Run Beta.exe
 The rest of the changelogs are not with me atm will update once I find it 
 
 V 0.01.02.1
-- fixed bug where the prediction point would show on the player's screen and would stay on a static place on the screen (move with screen)
+- fixed bug where the prediction point for the grappling hook, would show on the player's screen and would stay on a static place on the screen while grappling (stays in a position on the map)
 - Added more clouds to level 4
