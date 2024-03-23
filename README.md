@@ -1,4 +1,4 @@
-If you want to use my project please contact me via gmail on: yyse214@gmail.com
+If you want to use my project please contact me via Gmail at: yyse214@gmail.com
 
 Minimum specs:
 4GB VRAM (2 might work but it could be pushing it)
@@ -12,9 +12,13 @@ RTX 3070
 16 GB of DDR4 RAM
 10GB of storage 
 
+TO DOWNLOAD THE GAME:
+extract the .zip 
+Run Beta.exe
 
-Rest of chanelogs are not with me atm will update once I find it 
+
+Rest of changelogs are not with me atm will update once I find it 
 
 V 0.01.02.1
-- fixed bug wheere the predcition point would show on player's screen and would stay on a static place on the screen (move with screen)
+- fixed bug where the prediction point would show on the player's screen and would stay on a static place on the screen (move with screen)
 - Added more clouds to lvl 4
