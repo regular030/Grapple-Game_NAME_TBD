@@ -1,4 +1,4 @@
-If you want to use my project please contact me via Gmail at: yyse214@gmail.com
+If you want to use my project please contact me via Gmail at: yyse214@gmail.com or Discord at "regular030saturn"
 
 Minimum specs:
 4GB VRAM (2 might work but it could be pushing it)
@@ -17,8 +17,25 @@ extract the .zip
 Run Beta.exe
 
 
+Stuff I want to add: 
+A menu at the end of 
+
+
+
+
+
+
+
+
+
+
+
+
 The rest of the changelogs are not with me atm will update once I find it 
 
 V 0.01.02.1
 - fixed bug where the prediction point for the grappling hook, would show on the player's screen and would stay on a static place on the screen while grappling (stays in a position on the map)
 - Added more clouds to level 4
+
+V0.01.02.2_1
+- fixed issue where tabbing out of the game would create a grapple point in the world that could not be destroyed
