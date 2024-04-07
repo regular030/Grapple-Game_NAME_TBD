@@ -18,15 +18,9 @@ Run Beta.exe
 
 
 Stuff I want to add: 
-A menu at the end of 
-
-
-
-
-
-
-
-
+- A menu at the end of each lvl to show stats 
+- Moving platforms
+- Revamp of 1-3 (making #1 just a tutorial lvl) 
 
 
 
