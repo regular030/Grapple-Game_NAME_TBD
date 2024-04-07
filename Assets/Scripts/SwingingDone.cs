@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading;
 using UnityEngine;
 
 public class SwingingDone : MonoBehaviour
@@ -88,13 +89,14 @@ public class SwingingDone : MonoBehaviour
     }
 
 
-    private void StartSwing()
+    private async void StartSwing()
     {
+        Destroy(joint);
         // return if predictionHit not found
         if (predictionHit.point == Vector3.zero) return;
 
         // deactivate active grapple
-        if(GetComponent<Grappling>() != null)
+        if (GetComponent<Grappling>() != null)
             GetComponent<Grappling>().StopGrapple();
         pm.ResetRestrictions();
 
