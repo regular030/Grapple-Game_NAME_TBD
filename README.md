@@ -34,4 +34,4 @@ V 0.01.02.1
 V0.01.02.2_1
 - fixed issue where tabbing out of the game would create a grapple point in the world that could not be destroyed
 - updated lvl 3 with better meshes (still want to change it a bit more)
-- Started pause menu logic - will finish by 1.02.3
+- Started pause menu logic and pause menu option - only available in _INTERNAL
