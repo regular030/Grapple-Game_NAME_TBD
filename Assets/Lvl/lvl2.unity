@@ -813,7 +813,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startTime: 0
-  currentTimeText: {fileID: 2032065655}
+  currentTimeText: {fileID: 0}
   yep: 0
   done: {fileID: 0}
 --- !u!114 &433030841
@@ -831,7 +831,7 @@ MonoBehaviour:
   teleportTarget: {fileID: 433030839}
   tp: {fileID: 77889361}
   death: 0
-  text_death: {fileID: 1968446091}
+  text_death: {fileID: 0}
 --- !u!114 &433030842
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -845,7 +845,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Main: 
-  optionsMenu: {fileID: 0}
+  GUI: {fileID: 0}
+  Pause: {fileID: 0}
   NewGameScene: Backround
 --- !u!120 &433030843
 LineRenderer:
@@ -1999,10 +2000,10 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1942890512}
   - {fileID: 1087948942}
   - {fileID: 1743561036}
   - {fileID: 433030839}
+  - {fileID: 1942890512}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3495,7 +3496,7 @@ MonoBehaviour:
   teleportTarget: {fileID: 77889362}
   tp: {fileID: 433030838}
   death: 0
-  text_death: {fileID: 1968446091}
+  text_death: {fileID: 0}
 --- !u!65 &1087948944
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4609,7 +4610,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Main: Backround
-  optionsMenu: {fileID: 0}
+  GUI: {fileID: 0}
+  Pause: {fileID: 0}
   NewGameScene: Backround
 --- !u!114 &1942890514
 MonoBehaviour:

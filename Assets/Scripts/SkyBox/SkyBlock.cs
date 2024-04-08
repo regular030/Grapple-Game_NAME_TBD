@@ -3,12 +3,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using System.Threading;
 
 public class SkyBlock : MonoBehaviour
 {
     public Transform teleportTarget; // the player
     public GameObject tp; // where will you respawn
-    public float death; // how many times has the player died
+    public float death = 0; // how many times has the player died
     public TextMeshProUGUI text_death; // the display for death counter
 
     void OnTriggerEnter(Collider other)
@@ -16,5 +17,7 @@ public class SkyBlock : MonoBehaviour
         tp.transform.position = teleportTarget.transform.position; // the teleport function 
         death = death + 1; // add +1 death everytime you die
         text_death.SetText("Death Count:" +  death); // now display the new death counter 
+        //yield return new WaitForSecondsRealtime(2);
+        //Thread.Sleep(1000);
     }
 }
