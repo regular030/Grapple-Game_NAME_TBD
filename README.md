@@ -18,10 +18,12 @@ Run Beta.exe
 
 
 Stuff I want to add: 
-- A menu at the end of each lvl to show stats 
+- A menu at the end of each lvl to show stats
+- Settings for DPI changes, volume mixer when I add SFX, keybinds (I won't do graphics setting)
 - Moving platforms
-- Revamp of 1-3 (making #1 just a tutorial lvl) 
+- Revamp of 1-3 (making #1 just a tutorial lvl)
 
+- Controller support (this will be later) 
 
 
 
@@ -34,4 +36,4 @@ V 0.01.02.1
 V0.01.02.2_1
 - fixed issue where tabbing out of the game would create a grapple point in the world that could not be destroyed
 - updated lvl 3 with better meshes (still want to change it a bit more)
-- Started pause menu logic and pause menu option - only available in _INTERNAL
+- pause menu finshed 
