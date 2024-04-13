@@ -19,11 +19,14 @@ Run Beta.exe
 
 Stuff I want to add: 
 - A menu at the end of each lvl to show stats
-- Settings for DPI changes, volume mixer when I add SFX, keybinds (I won't do graphics setting)
+- Settings for DPI changes, volume mixer when I add SFX, key binds (I won't do graphics setting) (40% done)
 - Moving platforms
 - Revamp of 1-3 (making #1 just a tutorial lvl)
 
-- Controller support (this will be later) 
+- Controller support (this will be later)
+
+- I still need to bind WASD to its respective directions so I can put it in the keybinds settings, I also need to add pause keybinds to that + mouse dpi and inverted. 
+- I also need logic to save them to the player's computer so they don't need to set it again and again.
 
 
 
@@ -36,4 +39,8 @@ V 0.01.02.1
 V0.01.02.2_1
 - fixed issue where tabbing out of the game would create a grapple point in the world that could not be destroyed
 - updated lvl 3 with better meshes (still want to change it a bit more)
-- pause menu finshed 
+- pause menu finshed
+
+V0.01.02.2_2
+- Started Pause Menu Logic
+- Cleaned code up a bit more
