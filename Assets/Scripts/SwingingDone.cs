@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Security.Cryptography;
 using System.Threading;
+using System.Threading.Tasks;
 using UnityEngine;
 
 public class SwingingDone : MonoBehaviour
@@ -10,13 +12,15 @@ public class SwingingDone : MonoBehaviour
     public Transform gunTip, cam, player;
     public LayerMask whatIsGrappleable;
     public PlayerMovementGrappling pm;
+    public Settings Set;
+
 
     [Header("Swinging")]
     private float maxSwingDistance = 25f;
     private Vector3 swingPoint;
     private SpringJoint joint;
 
-    [Header("OdmGear")]
+    [Header("Stuff")]
     public Transform orientation;
     public Rigidbody rb;
     public float horizontalThrustForce;
@@ -29,9 +33,11 @@ public class SwingingDone : MonoBehaviour
     public Transform predictionPoint;
 
     [Header("Input")]
-    public KeyCode swingKey = KeyCode.Mouse0;
+    private KeyCode swingKey;
 
-
+    private void Start()
+    {
+    }
     private void Update()
     {
         if (Input.GetKeyDown(swingKey)) StartSwing();
@@ -39,7 +45,8 @@ public class SwingingDone : MonoBehaviour
 
         CheckForSwingPoints();
 
-        if (joint != null) OdmGearMovement();
+        if (joint != null) Movement();
+        swingKey = Set.SwingKeyy;
     }
 
     private void LateUpdate()
@@ -133,7 +140,7 @@ public class SwingingDone : MonoBehaviour
         predictionPoint.GetComponent<Renderer>().enabled = true;
     }
 
-    private void OdmGearMovement()
+    private void Movement()
     {
         // right
         if (Input.GetKey(KeyCode.D)) rb.AddForce(orientation.right * horizontalThrustForce * Time.deltaTime);

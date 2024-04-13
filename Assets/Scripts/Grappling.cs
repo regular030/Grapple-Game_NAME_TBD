@@ -22,9 +22,6 @@ public class Grappling : MonoBehaviour
     public float grapplingCd;
     private float grapplingCdTimer;
 
-    [Header("Input")]
-    public KeyCode grappleKey = KeyCode.Mouse1;
-
     private bool grappling;
 
     private void Start()
@@ -34,8 +31,6 @@ public class Grappling : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(grappleKey)) StartGrapple();
-
         if (grapplingCdTimer > 0)
             grapplingCdTimer -= Time.deltaTime;
     }
@@ -46,34 +41,6 @@ public class Grappling : MonoBehaviour
             lr.SetPosition(0, gunTip.position);
     }
 
-    private void StartGrapple()
-    {
-        if (grapplingCdTimer > 0) return;
-
-        // deactivate active swinging
-        GetComponent<SwingingDone>().StopSwing();
-
-        grappling = true;
-
-        pm.freeze = true;
-
-        RaycastHit hit;
-        if(Physics.Raycast(cam.position, cam.forward, out hit, maxGrappleDistance, whatIsGrappleable))
-        {
-            grapplePoint = hit.point;
-
-            Invoke(nameof(ExecuteGrapple), grappleDelayTime);
-        }
-        else
-        {
-            grapplePoint = cam.position + cam.forward * maxGrappleDistance;
-
-            Invoke(nameof(StopGrapple), grappleDelayTime);
-        }
-
-        lr.enabled = true;
-        lr.SetPosition(1, grapplePoint);
-    }
 
     private void ExecuteGrapple()
     {

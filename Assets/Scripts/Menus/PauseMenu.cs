@@ -10,6 +10,7 @@ public class PauseMenu : MonoBehaviour {
 
     public GameObject GUI;
     public GameObject Pause;
+    public GameObject Settings;
     public string NewGameScene;
     private bool paused = false; 
     
@@ -19,6 +20,7 @@ public class PauseMenu : MonoBehaviour {
     {
         GUI.SetActive(true);
         Pause.SetActive(false);
+        Settings.SetActive(false);
         paused = false;
     }
     // Update is called once per frame
@@ -36,6 +38,7 @@ public class PauseMenu : MonoBehaviour {
                 paused = true;
                 GUI.SetActive(false);
                 Pause.SetActive(true);
+                Settings.SetActive(false);
 
                 GetComponent<PlayerMovementGrappling>().enabled = false;
                 GetComponent<PlayerCam>().enabled = false;
@@ -52,6 +55,7 @@ public class PauseMenu : MonoBehaviour {
                 paused = false;
                 Pause.SetActive(false);
                 GUI.SetActive(true);
+                Settings.SetActive(false);
                 Cursor.visible = false;
 
                 GetComponent<PlayerMovementGrappling>().enabled = true;

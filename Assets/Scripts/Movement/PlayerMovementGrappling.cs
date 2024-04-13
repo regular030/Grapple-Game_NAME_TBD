@@ -27,9 +27,9 @@ public class PlayerMovementGrappling : MonoBehaviour
     private float startYScale;
 
     [Header("Keybinds")]
-    public KeyCode jumpKey = KeyCode.Space; // key to press when you want to jump
-    public KeyCode sprintKey = KeyCode.LeftShift; // key to press when you want to sprint 
-    public KeyCode crouchKey = KeyCode.LeftControl; // key to press when you want to crouch
+    private KeyCode JumpKey; // key to press when you want to jump
+    private KeyCode SprintKey; // key to press when you want to sprint 
+    private KeyCode CrouchKey; // key to press when you want to crouch
 
     [Header("Ground Check")]
     public float playerHeight; // how tall is the player
@@ -43,7 +43,11 @@ public class PlayerMovementGrappling : MonoBehaviour
 
     [Header("Camera Effects")]
     public PlayerCam cam; //get the player camera
-    public float grappleFov = 95f; // the field of view for the character 
+    public float grappleFov = 95f; // the field of view for the character
+                                   // 
+    [Header("References")]
+    public Settings Set;
+
 
     public Transform orientation; // the orientation of the camera 
 
@@ -80,6 +84,13 @@ public class PlayerMovementGrappling : MonoBehaviour
         readyToJump = true;//you are ready to jump
 
         startYScale = transform.localScale.y;//camera transformations
+        SetKey();
+    }
+    public void SetKey()
+    {
+        JumpKey = Set.JumpKey;
+        SprintKey = Set.SprintKey;
+        CrouchKey = Set.CrouchKey;
     }
 
     private void Update()
@@ -98,6 +109,7 @@ public class PlayerMovementGrappling : MonoBehaviour
             rb.drag = groundDrag; //physics for grappling
         else
             rb.drag = 0;
+        SetKey();
 
         //TextStuff();
     }
@@ -113,7 +125,7 @@ public class PlayerMovementGrappling : MonoBehaviour
         verticalInput = Input.GetAxisRaw("Vertical"); // move left/right
 
         // when to jump
-        if (Input.GetKey(jumpKey) && readyToJump && grounded) //if the jump button is pressed then jump if you are on the ground and are ready to jump
+        if (Input.GetKey(JumpKey) && readyToJump && grounded) //if the jump button is pressed then jump if you are on the ground and are ready to jump
         {
             readyToJump = false; // if this is true set ready to jump at false
 
@@ -123,14 +135,14 @@ public class PlayerMovementGrappling : MonoBehaviour
         }
 
         // start crouch
-        if (Input.GetKeyDown(crouchKey)) // if crouch has been press then:
+        if (Input.GetKeyDown(CrouchKey)) // if crouch has been press then:
         {
             transform.localScale = new Vector3(transform.localScale.x, crouchYScale, transform.localScale.z); //set the hight of the player if crouched 
             rb.AddForce(Vector3.down * 5f, ForceMode.Impulse); //not used (feture will be added)
         }
 
         // stop crouch
-        if (Input.GetKeyUp(crouchKey)) // if crouch has been pressed then:
+        if (Input.GetKeyUp(CrouchKey)) // if crouch has been pressed then:
         {
             transform.localScale = new Vector3(transform.localScale.x, startYScale, transform.localScale.z); //set back to normal hight 
         }
@@ -162,14 +174,14 @@ public class PlayerMovementGrappling : MonoBehaviour
         }
 
         // Mode - Crouching
-        else if (Input.GetKey(crouchKey))
+        else if (Input.GetKey(CrouchKey))
         {
             state = MovementState.crouching;
             moveSpeed = crouchSpeed;
         }
 
         // Mode - Sprinting
-        else if (grounded && Input.GetKey(sprintKey))
+        else if (grounded && Input.GetKey(SprintKey))
         {
             state = MovementState.sprinting;
             moveSpeed = sprintSpeed;
