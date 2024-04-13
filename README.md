@@ -1,4 +1,5 @@
-If you want to use my project please contact me via Gmail at: yyse214@gmail.com or Discord at "regular030saturn"
+If you want to use my project please contact me via Gmail at: yyse214@gmail.com or Discord at "regular030saturn" 
+Using Editor Version 2022.2.18f1
 
 Minimum specs:
 4GB VRAM (2 might work but it could be pushing it)
@@ -15,7 +16,6 @@ RTX 3070
 TO DOWNLOAD THE GAME:
 extract the .zip 
 Run Beta.exe
-
 
 Stuff I want to add: 
 - A menu at the end of each lvl to show stats
